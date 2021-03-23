@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"
+        style="position: relative; height: 500px; width: 800px; background-color: rgb(97, 224, 182); margin: 50px 300px;">
+        <!-- <div><button id="startbtn" onclick=move();> Start</button></div> -->
+        <div> <button id="stopbtn" onclick=stop();> Stop</button></div>
+        <div id="rectangle"
+            style="position: absolute; height: 100px; width: 100px; background-color: rgb(230, 165, 69);"></div>
+
+    </div>
+</body>
+<script>
+    // window.onload = function () {
+    //     move();
+    // };
+
+    var d = document.getElementById("rectangle");
+    var position = 0;
+    var myVar = setInterval(move, 10);
+
+    
+
+    function move() {
+         position += 1;
+        d.style.left = position + "px";
+
+    }
+
+    //    if( document.getElementById("rectangle").style.marginLeft = "700px"){
+    //        clearInterval(myVar);
+    //    }
+
+    // if (d.style.marginLeft = 700 + "px") {
+    //    stop();
+    // }
+
+    function stop() {
+        clearInterval(myVar);
+    }
+
+</script>
+
+</html>
